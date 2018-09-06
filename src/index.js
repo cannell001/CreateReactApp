@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import TodoComponent from './TodoComponent';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App msg="who cut the cheese" />, document.getElementById('root'));
+
+var myCheese = {name: 'Gorgonzola', smellFactor: 'Extreme pong', price: 3.50 };
+
+ReactDOM.render(<TodoComponent cheese={myCheese} />, document.getElementById('root'));
 registerServiceWorker();
