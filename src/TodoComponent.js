@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
 
 class TodoComponent extends Component {
-  render() {
-    return (
-        <div>
-            <h1>Using ES6 Classes with props</h1>
-            <div>
-                <p><strong>Cheese name: </strong> {this.props.cheese.name}</p>
-                <p><strong>Cheese smell factor: </strong> {this.props.cheese.smellFactor}</p>
-                <p><strong>Cheese price: </strong>£{this.props.cheese.price}</p>
+	constructor(props) {
+		super(props);
+		this.state = {
+            todos: ['wash the dishes', 'cut the cheese', 'take a nap']
+        };
+    }
+    //getInitialState
+    render(){
+        return(
+            <div id="todo-list">
+				<h2>State with JSX</h2>
+                <p>React stuff goes here...</p>
+				<ul>
+					<li>{this.state.todos[0]}</li>
+					<li>{this.state.todos[1]}</li>
+					<li>{this.state.todos[2]}</li>
+				</ul>
             </div>
-        </div>
-    );
-  }
+        );
+    } //render
 }
 
 export default TodoComponent;

@@ -5,7 +5,6 @@ import TodoComponent from './TodoComponent';
 import registerServiceWorker from './registerServiceWorker';
 
 
-var myCheese = {name: 'Gorgonzola', smellFactor: 'Extreme pong', price: 3.50 };
 
-ReactDOM.render(<TodoComponent cheese={myCheese} />, document.getElementById('root'));
+ReactDOM.render(<TodoComponent />, document.getElementById('root'));
 registerServiceWorker();
