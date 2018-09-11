@@ -1,13 +1,31 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h1>Hello World</h1>
-      </div>
-    );
-  }
+    state = {
+        name: 'Ryu',
+        age: 30
+    }
+    handleMouseOver(e) {
+        console.log(e.target, e.pageX);
+    }
+    handleClick(e) {
+        console.log(e.target);
+        // console.log(this.state); --> will not work, see next video
+    }
+    handleCopy(e) {
+        console.log('Try being original for once');
+    }
+    render() {
+        return(
+          <div className="app-content">
+            <h1>Hello, ninjas!</h1>
+            <p>My name is: { this.state.name } and I am { this.state.age }</p>
+            <button onClick={this.handleClick}>Click me</button>
+            <button onMouseOver={this.handleMouseOver}>Hover me</button>
+            <p onCopy={this.handleCopy}>What we think, we become</p>
+          </div>
+        )
+    }
 }
 
 export default App;
