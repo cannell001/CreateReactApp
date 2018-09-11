@@ -2,20 +2,21 @@ import React, {Component} from 'react';
 
 class App extends Component {
     state = {
-        name: 'Ryu',
-        age: 30
+      name: 'Ryu',
+      age: 30
     }
-    handleMouseOver(e) {
-        console.log(e.target, e.pageX);
+    handleMouseOver = (e) => {
+      console.log(e.target, e.pageX);
     }
-    handleClick(e) {
-        console.log(e.target);
-        // console.log(this.state); --> will not work, see next lesson
-        // console.log(this.state.age); --> will not work, see next lesson
-        // problem with context of 'this'
+    handleClick = (e) => {
+      console.log(e.target);
+      console.log(this.state);
+      this.setState({
+        name: 'Yoshi'
+      });
     }
-    handleCopy(e) {
-        console.log('Try being original for once');
+    handleCopy = (e) => {
+      console.log('Try being original for once');
     }
     render() {
         return(
