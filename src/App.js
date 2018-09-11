@@ -10,7 +10,9 @@ class App extends Component {
     }
     handleClick(e) {
         console.log(e.target);
-        // console.log(this.state); --> will not work, see next video
+        // console.log(this.state); --> will not work, see next lesson
+        // console.log(this.state.age); --> will not work, see next lesson
+        // problem with context of 'this'
     }
     handleCopy(e) {
         console.log('Try being original for once');
