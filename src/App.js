@@ -5,19 +5,16 @@ class App extends Component {
       name: 'Ryu',
       age: 30
     }
-    handleMouseOver = (e) => {
-      console.log(e.target, e.pageX);
-    }
-    handleClick = (e) => {
-      console.log(e.target);
-      console.log(this.state);
+    handleMouseOver = e => console.log(e.target, e.pageX);
+
+    handleClick = () => {
       this.setState({
         name: 'Yoshi'
       });
     }
-    handleCopy = (e) => {
-      console.log('Try being original for once');
-    }
+    
+    handleCopy = e => console.log('Try being original for once');
+
     render() {
         return(
           <div className="app-content">
